@@ -107,7 +107,7 @@ function Signup() {
         By creating an account, you agree to Quiz App's Privacy Policy
         <br /> and Terms of Use.
       </p>
-      <Link to="/Home">
+      <Link to="/login">
         <button className="container-btn" type="submit" onClick={() => {}}>
           Join US{" "}
         </button>
