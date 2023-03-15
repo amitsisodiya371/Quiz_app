@@ -1,0 +1,61 @@
+.container{
+  
+  /* margin:70px; */
+  /* background-image: url('https://www.shutterstock.com/image-vector/neon-light-glow-effect-quiz-600w-2169820083.jpg'); */
+  background-image: linear-gradient(rgb(121, 18, 19), rgb(49, 11, 11), rgba(0, 0, 0, 1));
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .signup-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .signup-form input[type="text"],
+  .signup-form input[type="email"],
+  .signup-form input[type="password"],
+  .signup-form select,
+  .signup-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .signup-form select {
+    height: 40px;
+  }
+  
+  .signup-form button[type="submit"] {
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-form button[type="submit"]:hover {
+    background-color: #1559b3;
+  }
+  

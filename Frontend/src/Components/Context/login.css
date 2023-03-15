@@ -1,0 +1,40 @@
+.container{
+  padding: 20px;
+    margin:70px;
+    /* background-image: url('https://www.shutterstock.com/image-vector/neon-light-glow-effect-quiz-600w-2169820083.jpg'); */
+    background-image: linear-gradient(rgb(121, 18, 19), rgb(49, 11, 11), rgba(0, 0, 0, 1));
+}
+
+
+.image-logo{
+ width: 500px;
+ height: 100%;
+}
+.container p{
+    font-size: smaller;
+    color: #9c8d9c;
+}
+label{
+    font-size: smaller; 
+    color: #9c8d9c;
+}
+
+.container-2 input {
+    padding-left:15px;
+    height:50px;
+    width:350px;
+ margin:8px;
+ border:1px solid #9c8d9c
+
+ }
+
+ 
+
+
+ .container-btn{
+    width: 380px; 
+  
+    height:35px;
+    background-color: #1877F2;
+    color: white;
+ }
