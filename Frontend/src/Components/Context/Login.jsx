@@ -19,59 +19,85 @@ function Login(props) {
 
   const navigate=useNavigate();
  
-    
-
-  useEffect(() => {
-    const storedEmail= localStorage.getItem("email");
-    const storedPassword = JSON.parse(localStorage.getItem("password"));
-    if (storedEmail) {
-      setEmail(storedEmail);
-    }
-    if (storedPassword) {
-      setPassword(storedPassword);
-    }
-  }, []);
-  console.log(loginEmail,loginPassword)
-
-  const handleSubmit = e => {
-    e.preventDefault();
+  // const handleSubmit = e => {
+  //   e.preventDefault();
 
     
  
 
-    if (loginEmail== valurEmail && loginPassword == valuePassword) {
-      // navigateToHome();
-      alert("Login successful!")
-      navigate("/Home")
-      setIsLoggedIn(true);
+    // if (loginEmail== valurEmail && loginPassword == valuePassword) {
+    //   // navigateToHome();
+    //   alert("Login successful!")
+    //   navigate("/Home")
+    //   setIsLoggedIn(true);
       
-      // ...
-    } else {
+    //   // ...
+    // } else {
     
-      alert("Login failed. Please check your email and password.");
-    }}
+    //   alert("Login failed. Please check your email and password.");
+    // }}
   
 
+    const [user,setUser] = useState({})
+
+
+    function handleChange(e){
+      const {name,value} = e.target;
+      setUser({...user,[name]:value})
+    }
+    
+    function handleLogin(event){
+      // console.log(user)
+      event.preventDefault();
+      const payload =JSON.stringify(user);
+      // try{
+        // console.log(payload)
+      fetch("http://localhost:8000/login",{
+        headers:{
+          "Content-Type" : "application/json"
+        },
+      method: 'POST',
+      body:payload
+      
+      }).then((res)=>
+      res.json())
+      .then((res)=>{
+      // localStorage.setItem('usertoken', JSON.stringify(res.token)))
+      console.log(res)
+      console.log("id "+res.userinfo._id)
+      if(res.token){
+        
+        localStorage.setItem('userid', JSON.stringify(res.userinfo._id))
+      navigate('/Home')
+      }
+    })
+      .catch((err)=>
+        console.log(err))
+        
+      }
+    
   return (
   <><NavBefore/>
     <div className="container">
       
       {/* <img className="image-logo"src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"></img> */}
-      <form onSubmit={handleSubmit} >
+      <form  >
         <div className="container-2">
           <input
-            type="email"
+            type="text"
             placeholder="Email"
-            value={valurEmail}
-            onChange={(e) => setValueEmail(e.target.value)}
+            name="email"
+            // value={valurEmail}
+            onChange={handleChange}
 
           />
           <br />
           <input
             type="password"
             placeholder="Password"
-            value={valuePassword}
-            onChange={(e) => setValuePassword(e.target.value)}
+            name="password"
+            // value={valuePassword}
+            onChange={handleChange}
           />
           <br />
         </div>
@@ -87,13 +113,11 @@ function Login(props) {
           By logging in, you agree to Quizz App's Privacy Policy and <br />
           Terms of Use.
         </p>
-<button className="container-btn" type="submit">
-          Sign In
-        </button>
+<button className="container-btn" type="submit" onClick={handleLogin}>Sign In</button>
        
       </form>
 
-      <Link to="/Signup"><h2 className="container-p1" >Not a Member? <a style={{color:"blue"}}>Join Us.</a> </h2></Link>
+      <Link to="/Signup"><h2 className="container-p1" >Not a Member? Join Us. </h2></Link>
     </div></>
   );
   }
