@@ -3,10 +3,10 @@
 const User = require("../model/user.model")
 let user;
 function getToken(user){
-    const userId = user.id;
-    const tokenPayload = {userId}
+    // const userId = user.id;
+    // const tokenPayload = {userId}
     // const accessToken = jwt.sign(tokenPayload,process.env.JWT_SECRET_KEY);
-    const accessToken =12345
+    const accessToken ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDEyZTU0NWQyNTNkNDBlYTUyODFkNzIiLCJpYXQiOjE2Nzg5NTk5NDF9.qF3t4-GXOAaVjev7hwaXfTnfQs_UANd2EmWEetTWCKM"
     return accessToken
 }
 const Signup = async(req,res) =>{
