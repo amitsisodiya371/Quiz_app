@@ -1,3 +1,8 @@
+#main{
+    display: flex;
+    justify-content: space-around;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/008/889/844/small/quiz-set-in-doodle-style-illustration-icon-question-symbol-for-print-and-design-quiz-and-exam-concept-isolated-element-on-black-background-collection-of-sign-for-school-and-event-vector.jpg");
+}
 .container{
   padding: 20px;
     margin:70px;
@@ -7,7 +12,7 @@
 
 
 .image-logo{
- width: 500px;
+ width: 100%px;
  height: 100%;
 }
 .container p{
@@ -37,4 +42,7 @@ label{
     height:35px;
     background-color: #1877F2;
     color: white;
+ }
+ .container-btn:hover{
+    background-color: orangered;
  }

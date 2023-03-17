@@ -44,10 +44,10 @@ const Home = () => {
   };
 
   return (
-    <><Nav/>
-    <div>
+    <>
+    <div  >
 
-        <Heading fontSize="40px">Set up your Quiz</Heading>
+        <Heading fontSize="40px" color="red" bg={"pink"} p={'5'}>Set up your Quiz</Heading>
       <div
         style={{
           display: "flex",
@@ -55,6 +55,7 @@ const Home = () => {
           flexDirection:"column",
           alignItems: "center",
           height: "95vh",
+          backgroundImage:"url(https://img.freepik.com/premium-vector/hands-people-solving-puzzles-brain-teasers-answering-quiz-questions-team-intellectual-game-test-intelligence-intellect_198278-3453.jpg?size=626&ext=jpg&ga=GA1.2.1533321522.1671298321&semt=ais)"
         }}
         
       >
@@ -65,12 +66,14 @@ const Home = () => {
             flexDirection: "column",
             width: "500px",
             gap: "30px",
+            // marginTop:"5px",
             boxShadow:
             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
             padding:"20px",
             borderRadius:"10px",
-            marginTop:"-20%",
-            border:"2px solid orange"
+            marginTop:"-10%",
+            border:"2px solid orange",
+            backgroundColor:"white"
             // height:"60%"
           }}
         >

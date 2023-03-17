@@ -17,13 +17,14 @@ const Result = () => {
    var total=loadData("total");
 
   return ( 
-    <div>
-
+    <div >
 <Nav/>
+{/*  <div style={{backgroundImage:"url(https://static.vecteezy.com/system/resources/thumbnails/008/889/844/small/quiz-set-in-doodle-style-illustration-icon-question-symbol-for-print-and-design-quiz-and-exam-concept-isolated-element-on-black-background-collection-of-sign-for-school-and-event-vector.jpg)"}}> */}
         <Heading fontSize="20px">Correct answers count: {score+1}</Heading>
         <Heading fontSize="20px">Incorrect answers count: {total}</Heading>
         <Heading fontSize="20px">Total score: {total}</Heading>
         <Heading fontSize="20px">Percentage: {"50%"}</Heading>
+        {/* </div> */}
     </div>
   )
 }

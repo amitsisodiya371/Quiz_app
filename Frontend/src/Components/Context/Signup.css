@@ -1,8 +1,14 @@
+#main{
+  display: block;
+  justify-content: space-around;
+  background-image: url("https://img.freepik.com/premium-vector/hands-people-solving-puzzles-brain-teasers-answering-quiz-questions-team-intellectual-game-test-intelligence-intellect_198278-3453.jpg?size=626&ext=jpg&ga=GA1.2.1533321522.1671298321&semt=ais");
+}
 .container{
   
   /* margin:70px; */
   /* background-image: url('https://www.shutterstock.com/image-vector/neon-light-glow-effect-quiz-600w-2169820083.jpg'); */
   background-image: linear-gradient(rgb(121, 18, 19), rgb(49, 11, 11), rgba(0, 0, 0, 1));
+  /* width:"50%" */
 }
 
 .signup-form {
@@ -56,6 +62,6 @@
   }
   
   .signup-form button[type="submit"]:hover {
-    background-color: #1559b3;
+    background-color: orangered;
   }
   

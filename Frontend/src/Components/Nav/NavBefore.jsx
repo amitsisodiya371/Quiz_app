@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import   {Heading}from "@chakra-ui/react"
 function NavBefore(props) {
   var divStyle = {
-    padding: "20px",
+    padding: "15px",
     backgroundColor: "orangered",
     textAlign: "right",
   };
@@ -12,7 +12,7 @@ function NavBefore(props) {
     marginRight: "50px",
     textDecoration: "none",
   };
-  return (<div style={{backgroundColor: "orangered"}}>
+  return (<div style={{backgroundColor: "pink"}}>
   <Heading>Welcome to Quiz App</Heading>
     <div style={divStyle}>
         {/* <h2>Welcome to Quiz App</h2> */}

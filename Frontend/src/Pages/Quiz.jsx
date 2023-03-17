@@ -2,7 +2,6 @@ import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/action";
-// import { loadData } from "../utils/Localstorage";
 import { useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
@@ -52,16 +51,17 @@ const Quiz = () => {
 
   const handlesubmit = () => {
     if (page == appdata.length - 1) {
-      return navigate("../result");
+      return navigate("/result");
     }
   };
 
   return (
     <div>
-      <Heading fontSize="20px" padding="10px">
-        Masai QuizMe
+      <Heading fontSize="40px" color="red" bg={"pink"} p={'5'}>
+         Quiz Start
       </Heading>
-      <div
+      <div style={{ backgroundImage:"url(https://img.freepik.com/premium-vector/hands-people-solving-puzzles-brain-teasers-answering-quiz-questions-team-intellectual-game-test-intelligence-intellect_198278-3453.jpg?size=626&ext=jpg&ga=GA1.2.1533321522.1671298321&semt=ais)"}}>
+     <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -69,6 +69,7 @@ const Quiz = () => {
           alignItems: "center",
           textAlign: "start",
           gap: "20px",
+          
         }}
       >
         {/* {data.map((item, index) => ( */}
@@ -78,7 +79,10 @@ const Quiz = () => {
             boxShadow:
               "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
             width: "500px",
+            marginTop:"30px",
             padding: "16px",
+            backgroundColor:"white",
+            marginBottom:"30px",
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -186,6 +190,7 @@ const Quiz = () => {
       <Flex gap="20px" justifyContent="center">
         <Button
           colorScheme="blue"
+          marginBottom="50px"
           onClick={() => {
             if (page >= 1 && page <= appdata.length - 1) {
               setPage((prev) => prev - 1);
@@ -218,7 +223,7 @@ const Quiz = () => {
           Submit Quiz
         </Button>
       </Flex>
-    </div>
+    </div></div>
   );
 };
 
