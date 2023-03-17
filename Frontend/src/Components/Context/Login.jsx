@@ -5,6 +5,7 @@ import React, { useState, useEffect, useContext } from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
 import NavBefore from "../Nav/NavBefore";
+import Footer from "../footer";
 
 function Login(props) {
  
@@ -53,7 +54,7 @@ function Login(props) {
       <NavBefore />
       <div id="main">
         <div >
-          <img style={{width:"90%",marginTop:"20px"}} src="https://play-lh.googleusercontent.com/xHyi_y3H4zVwfAb2dmFLt8YYeVqqXb0EKJJTxPR8dBDyi-mTjQWhXLEw6ilwAq1VOQ" alt="" />
+          <img style={{width:"80%",margin:"30px"}} src="https://play-lh.googleusercontent.com/xHyi_y3H4zVwfAb2dmFLt8YYeVqqXb0EKJJTxPR8dBDyi-mTjQWhXLEw6ilwAq1VOQ" alt="" />
         </div>
         <div className="container">
           {/* <img className="image-logo"src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"></img> */}
@@ -98,6 +99,7 @@ function Login(props) {
           </Link>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
