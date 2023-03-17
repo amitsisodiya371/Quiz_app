@@ -18,7 +18,7 @@ function Signup() {
     const payload = JSON.stringify(user);
     // try{
     // console.log(payload);
-    fetch("http://localhost:8000/Signup", {
+    fetch("https://confused-fly-sombrero.cyclic.app/Signup", {
       headers: {
         "Content-Type": "application/json",
       },

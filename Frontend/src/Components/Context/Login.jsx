@@ -25,7 +25,7 @@ function Login(props) {
     const payload = JSON.stringify(user);
     // try{
     // console.log(payload)
-    fetch("http://localhost:8000/login", {
+    fetch("https://confused-fly-sombrero.cyclic.app/login", {
       headers: {
         "Content-Type": "application/json",
       },
