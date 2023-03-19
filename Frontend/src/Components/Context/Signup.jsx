@@ -114,7 +114,7 @@ function Signup() {
             </label>
           </div>
 
-          {/* <Link to="/login"> */}
+          <Link to="/login">
           <button
             className="container-btn"
             type="submit"
@@ -122,7 +122,7 @@ function Signup() {
           >
             Join US{" "}
           </button>
-          {/* </Link> */}
+          </Link>
           <Link to="/login">
             <p className="container-p1">Already a Member? Signin</p>
           </Link>

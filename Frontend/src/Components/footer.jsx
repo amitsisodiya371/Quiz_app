@@ -6,14 +6,14 @@ import "./footer.css";
 // import { FaTwitter } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import { AiFillHeart } from "react-icons/ai";
-
+import {Heading} from "@chakra-ui/react"
  const Footer = () => {
     return (
         <>
             <div id="footer-parent">
                 <div id="footer">
-                <div style={{display:"inline"}} ><h1 style={{color:"white"}}>Made By  Amit Sisodiya</h1></div>
-                <span style={{color:"red" ,fontSize:"35px"}}><AiFillHeart/> </span>
+                <div><Heading style={{color:"hotpink", width:"100%"}}>Made By <br /> Amit Sisodiya</Heading></div>
+                {/* <span style={{color:"red" ,fontSize:"35px", marginLeft:"400px",textAlign:"center"}}><AiFillHeart/> </span> */}
                 <br />
                     <div id="icons">
                         <a href="https://github.com/amitsisodiya371" id="ref"><FaGithub className="footer-icons" /></a>
